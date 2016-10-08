@@ -1,7 +1,8 @@
-source 'https://rubygems.org'
+# source 'https://rubygems.org'
 
 gem 'pry-rails'
 gem 'sidekiq'
+gem 'faker'
 
 gem 'seasonal'
 
