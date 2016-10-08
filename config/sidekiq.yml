@@ -1,0 +1,6 @@
+# configuration file for Sidekiq
+:queues:
+  - high
+  - medium
+  - low
+  - default
