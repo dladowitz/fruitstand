@@ -1,8 +1,10 @@
 # source 'https://rubygems.org'
 
-gem 'pry-rails'
-gem 'sidekiq'
 gem 'faker'
+# gem 'pry-rails'
+gem 'pry-byebug'
+gem 'pundit'
+gem 'sidekiq'
 
 gem 'seasonal'
 

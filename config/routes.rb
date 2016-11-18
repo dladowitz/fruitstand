@@ -1,5 +1,6 @@
 require 'sidekiq/web'
 Rails.application.routes.draw do
+  resources :vegetables
   resources :fruits
   mount Sidekiq::Web, at: "/sidekiq"
 

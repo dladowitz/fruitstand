@@ -1,5 +1,11 @@
 class FruitsController < ApplicationController
   before_action :set_fruit, only: [:show, :edit, :update, :destroy]
+  before_action :authorize_action
+
+  def policy(record)
+    policy = PolicyFinder.new(record).policy
+    policy.new(current_user, record, params) if policy
+  end
 
   # GET /fruits
   # GET /fruits.json
@@ -70,5 +76,9 @@ class FruitsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def fruit_params
       params.require(:fruit).permit(:name, :color)
+    end
+
+    def authorize_action
+      authorize Fruit
     end
 end
